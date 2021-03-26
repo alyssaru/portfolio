@@ -2,11 +2,26 @@ html{
     scroll-behavior: smooth;
 }
 
+header{
+  background-color: #17294a;
+  align-content: center;
+}
+
+header > img{
+  max-width: 20%;
+}
+main > header > h1{
+  background-color: blue;
+}
+
 body{
   background-color: #737372;
   font-size: 18px;
   margin: 0;
   padding: 0;
+  color: white;
+  font-family: "Anduka", sans-serif;
+  font-weight: lighter;
 }
 
 h1{
@@ -24,25 +39,72 @@ h2{
 nav li{
   display:inline;
   padding-right:20px;
-
 }
 
 nav{
-  background-color: #ddd;
+  background-color: #f8b220;
   padding: 25px 0; 
-  text-align: left;
+  text-align: center;
+  width: 100%;
 }
 
-footer{
-  background-color: black;
-  color: white;
-  padding-top: 30px;
-  text-align: center;
+nav a{
+  text-decoration: none;
+  color: #17294a;
 }
 
 header p{
   color: white;
   font-size: 24px;
   padding: 0 100px;
+  text-align: center;
+}
+
+footer{
+  background-color: #f8b220;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.container{
+  grid-template-columns: repeat(15, auto);
+}
+
+.gallery{
+  min-height: 600px;
+  /*Your code here again.*/
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery > img {
+  border: 5px #f8b220 solid;
+  margin: 10px;
+  width: 300px;
+}
+
+.gallery > #main {
+  min-width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team {
+  grid-template-columns: auto auto auto auto;
+}
+.maize{
+  text-align: center;
+}
+.blue{
+  text-align: center;
+}
+.coaches{
   text-align: center;
 }
