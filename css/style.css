@@ -7,6 +7,10 @@ header{
   align-content: center;
   font-family: Anduka, sans-serif;
 }
+img{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 header > img{
   position: absolute;
@@ -15,10 +19,11 @@ header > img{
   float: left;
 }
 
-main > header > h1{
-  margin: 20px;
+.title{
+  margin: 20px auto 20px auto;
   border: 5px #f8b220 solid;
   background-color: #1b386d;
+  width: 60%;
 }
 
 header > p{
@@ -53,6 +58,8 @@ h1{
 h2{
   font-size: 32px;
   line-height: 1.5;
+  text-align: center;
+  margin: auto;
 }
 
 nav li{
@@ -75,13 +82,10 @@ nav a{
 header p{
   color: white;
   font-size: 24px;
-  padding: 0 100px;
   text-align: center;
 }
 
-.container{
-  grid-template-columns: repeat(15, auto);
-}
+
 
 .gallery{
   min-height: 600px;
@@ -126,7 +130,6 @@ footer{
   color: white;
   margin-top: 30px;
   padding-top: 30px;
-  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -182,6 +185,24 @@ input, button {
   grid-column: 2 / 3;
 }
 
+.container {
+  display: flex;
+  flex-flow: wrap;
+  margin: auto 10px auto 10px;
+}
+
+.container > img {
+  width: 30%;
+  align-items: center;
+  margin: 10px auto 10px auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container > p{
+  padding-bottom: 0;
+}
+
 @media screen and (min-width: 750px){
   main > header > h1{
     margin: 20px;
@@ -198,4 +219,56 @@ input, button {
     margin-left: 10%;
   }
 
+  .maize{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 16px;
+    background: #1b386d;
+    border-top: 2px solid #f8b220;
+    border-bottom: 2px solid #f8b220;
+    max-width: 600px;
+    padding: 1em;
+    align-items: center;
+    margin: 20px auto 10px auto;
+  }
+  .blue{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 16px;
+    background: #1b386d;
+    border-top: 2px solid #f8b220;
+    border-bottom: 2px solid #f8b220;
+    max-width: 600px;
+    padding: 1em;
+    align-items: center;
+    margin: 20px auto 10px auto;
+  }
+
+  .coaches{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 16px;
+    background: #1b386d;
+    border-top: 2px solid #f8b220;
+    border-bottom: 2px solid #f8b220;
+    max-width: 600px;
+    padding: 1em;
+    align-items: center;
+    margin: 20px auto 10px auto;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    margin: auto 20% auto 20%;
+  }
+
+  .container > p{
+    padding: 10px;
+  }
+
+  footer{
+    font-size: 30px;
+    line-height: 50px;
+  }
 }
