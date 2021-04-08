@@ -37,6 +37,7 @@ p{
   display: inline-block;
   align-items: center;
   padding-bottom: 50px;
+  min-width: 300px;
 }
 
 body{
@@ -97,7 +98,6 @@ header p{
 
 .gallery{
   min-height: 600px;
-  /*Your code here again.*/
   display: flex; 
   flex-direction: row; 
   align-items: center;
@@ -143,7 +143,6 @@ footer{
 
 #current{
   color: black;
-  
   text-decoration: underline 5px;
 }
 
@@ -211,24 +210,25 @@ select{
 
 .maize{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 16px;
   background: #1b386d;
   border-top: 2px solid #f8b220;
   border-bottom: 2px solid #f8b220;
-  max-width: 600px;
+  max-width: 700px;
   padding: 1em;
   align-items: center;
   margin: 20px auto 10px auto;
 }
+
 .blue{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 16px;
   background: #1b386d;
   border-top: 2px solid #f8b220;
   border-bottom: 2px solid #f8b220;
-  max-width: 600px;
+  max-width: 700px;
   padding: 1em;
   align-items: center;
   margin: 20px auto 10px auto;
@@ -236,20 +236,15 @@ select{
 
 .coaches{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto ;
   grid-gap: 16px;
   background: #1b386d;
   border-top: 2px solid #f8b220;
   border-bottom: 2px solid #f8b220;
-  max-width: 600px;
+  max-width: 700px;
   padding: 1em;
   align-items: center;
-  margin: 20px 10% 10px 10%;
-}
-
-.h{
-  text-align: center;
-  margin: 20px auto 20px auto;
+  margin: 20px auto 10px auto;
 }
 
 .im:hover{
@@ -280,7 +275,7 @@ select{
 }
 /*----------------------------------------------------------*/
 /* TABLET VIEW */
-@media screen and (min-width: 750px){
+@media screen and (min-width: 600px){
   main > header > h1{
     margin: 20px;
     border: 5px #f8b220 solid;
@@ -297,14 +292,30 @@ select{
   }
 
   .maize{
-    grid-template-columns: auto auto auto;
-    max-width: 700px;
+    grid-template-columns: auto auto ;
 
   }
+
+  .maize > h2{
+    grid-column: 1/span 2;
+  }
+
+
   .blue{
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto ;
     }
 
+  .blue > h2{
+    grid-column: 1/span 2;
+  }
+
+  .coaches{
+    grid-template-columns: auto auto ;
+  }
+
+  .coaches > h2{
+    grid-column: 1/span 2;
+  }
 
   .container {
     display: flex;
@@ -322,7 +333,7 @@ select{
   }
 
   .coaches{
-    margin: auto 20% auto 20% ;
+    grid-template-columns: auto auto ;
   }
   .calendar{
     display: grid;
