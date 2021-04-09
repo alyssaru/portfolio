@@ -161,8 +161,9 @@ a{
   max-width: 600px;
   padding: 1em;
   align-items: center;
-  margin: auto;
+  margin: 1fr;
   min-width: 300px;
+  margin-left: 25%;
 }
 
 form button {
@@ -170,6 +171,7 @@ form button {
   padding: 0.7em;
   width: 100%;
   border: 0;
+  margin: auto;
 }
 form button:hover {
   background: #f8b220;
@@ -251,6 +253,26 @@ select{
   border: 5px solid #f8b220;
   margin: 7px;
 }
+
+.skip a{
+  background: #f8b220;
+  left: 0;
+  padding: 7px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  color: black;
+}
+
+.skip a{
+  position: absolute;
+  top: -50px;
+}
+.skip a:focus{
+  position: absolute;
+  top: 10px;
+}
+
 /*----------------------------------------------------------*/
 .calendar{
   display: grid;
@@ -335,17 +357,20 @@ select{
   .coaches{
     grid-template-columns: auto auto ;
   }
-  .calendar{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+  .calendar > p{
+    grid-column: 1/ span 1;
   }
   .calendar h2{
     grid-column: span 3;
   }
   .calendar p{
-    grid-column: span 1;
+    grid-row: span 1;
   }
 
+  .form{
+    
+    min-width: 400px;
+    max-width: 750px;
+  }
 
 }
