@@ -248,6 +248,16 @@ select{
   align-items: center;
   margin: 20px auto 10px auto;
 }
+button{
+  background-color: #17294a;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid #f8b220;
+}
+
+#downArrow{
+  width: 15px;
+}
 
 .im:hover{
   border: 5px solid #f8b220;
@@ -271,6 +281,10 @@ select{
 .skip a:focus{
   position: absolute;
   top: 10px;
+}
+
+#thin{
+  visibility: hidden;
 }
 
 /*----------------------------------------------------------*/
@@ -297,7 +311,7 @@ select{
 }
 /*----------------------------------------------------------*/
 /* TABLET VIEW */
-@media screen and (min-width: 600px){
+@media screen and (min-width: 100px){
   main > header > h1{
     margin: 20px;
     border: 5px #f8b220 solid;
@@ -372,5 +386,47 @@ select{
     min-width: 400px;
     max-width: 750px;
   }
+}
+@media screen and (min-width: 600px){
+  #main > .container{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto ;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #p1{
+    grid-row: 1/ Span 1;
+  }
+  #thin1, #thin2,#thin3{
+    width: 100%;
+    border: 2px solid #f8b220;
+  }
+  #thin1{
+    grid-row: 1/span 1;
+    grid-column: 2/Span 1;
+  }
+  #thin2{
+    grid-row: 2/span 1;
+    grid-column: 1/span 1;
+  }
+  #p2{
+    grid-row: 2/ Span 1;
+  }
+  #p3{
+    grid-row: 3/ Span 1;
+  }
+  #thin3{
+    grid-row: 3/span 1;
+    grid-column: 2/span 1;
+  }
+
+  #pagebreak{
+    visibility: hidden;
+  }
+  #thin{
+    visibility: visible;
+  }
 }
