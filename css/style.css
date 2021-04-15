@@ -34,10 +34,11 @@ header > p{
 }
 
 p{
-  display: inline-block;
   align-items: center;
   padding-bottom: 50px;
   min-width: 300px;
+  text-align: center;
+  font-size: 24px;
 }
 
 body{
@@ -46,7 +47,7 @@ body{
   margin: 0;
   padding: 0;
   color: white;
-  font-family: calibri, sans-serif;
+  font-family: Anduka, sans-serif;
   font-weight: lighter;
 }
 
@@ -283,8 +284,28 @@ button{
   top: 10px;
 }
 
-#thin{
-  visibility: hidden;
+#thin1, #thin2, #thin3{
+  display: none;
+}
+
+#ball{
+  width: 20%;
+}
+
+.logos{
+  list-style-type: none;
+  justify-content: center;
+  text-align: center;
+}
+.logo{
+  min-width: 80px;
+  max-width: 100px;
+  margin-bottom: 20px;
+
+}
+.social_media{
+  padding-right:10px;
+  display: inline-block;
 }
 
 /*----------------------------------------------------------*/
@@ -311,7 +332,7 @@ button{
 }
 /*----------------------------------------------------------*/
 /* TABLET VIEW */
-@media screen and (min-width: 100px){
+@media screen and (min-width: 600px){
   main > header > h1{
     margin: 20px;
     border: 5px #f8b220 solid;
@@ -382,12 +403,18 @@ button{
   }
 
   .form{
-    
     min-width: 400px;
     max-width: 750px;
   }
+  .logos{
+    padding: 25px 0; 
+  }
+  .logo{
+    width: 100px;
+    margin: auto 20px auto 20px;
+  }
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 756px){
   #main > .container{
     display:grid;
     grid-template-columns: auto auto;
@@ -396,7 +423,6 @@ button{
     justify-content: center;
     align-items: center;
   }
-
   #p1{
     grid-row: 1/ Span 1;
   }
@@ -422,11 +448,19 @@ button{
     grid-row: 3/span 1;
     grid-column: 2/span 1;
   }
-
   #pagebreak{
     visibility: hidden;
   }
-  #thin{
-    visibility: visible;
+  #thin1, #thin2, #thin3{
+    display: inline;
   }
+
+  .calendar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .calendar > p{
+    grid-column: span 1;
+  }
+  
 }
