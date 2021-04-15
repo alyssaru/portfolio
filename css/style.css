@@ -5,8 +5,9 @@ html{
 header{
   background-color: #17294a;
   align-content: center;
-  font-family: Anduka, sans-serif;
+  font-family: 'Inter', sans-serif;
   min-width: 300px;
+  font-weight: 600;
 }
 img{
   margin-left: auto;
@@ -39,6 +40,7 @@ p{
   min-width: 300px;
   text-align: center;
   font-size: 24px;
+  font-weight: 200;
 }
 
 body{
@@ -47,8 +49,8 @@ body{
   margin: 0;
   padding: 0;
   color: white;
-  font-family: Anduka, sans-serif;
-  font-weight: lighter;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
 }
 
 h1{
@@ -69,6 +71,8 @@ nav li{
   display:inline;
   padding-right:20px;
   line-height: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 nav{
@@ -145,6 +149,7 @@ footer{
 #current{
   color: black;
   text-decoration: underline 5px;
+  text-transform: capitalize;
 }
 
 a{
@@ -162,9 +167,8 @@ a{
   max-width: 600px;
   padding: 1em;
   align-items: center;
-  margin: 1fr;
   min-width: 300px;
-  margin-left: 25%;
+  margin: auto;
 }
 
 form button {
@@ -307,6 +311,13 @@ button{
   padding-right:10px;
   display: inline-block;
 }
+
+.social_media > a{
+  text-decoration: none;
+}
+
+
+
 
 /*----------------------------------------------------------*/
 .calendar{
@@ -462,5 +473,11 @@ button{
   .calendar > p{
     grid-column: span 1;
   }
-  
+
+  p{
+    margin: auto 5%;
+  }
+  .social_media{
+    padding-right: 25px;
+  }
 }
