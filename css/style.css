@@ -26,6 +26,7 @@ header > img{
   border: 5px #f8b220 solid;
   background-color: #1b386d;
   width: 60%;
+  color: black;
 }
 
 header > p{
@@ -193,9 +194,6 @@ input, button {
   grid-column: 2 / 3;
 }
 
-select{
-  color: gray;
-}
 
 .container {
   display: flex;
@@ -316,7 +314,20 @@ button{
   text-decoration: none;
 }
 
+#mainLogo, .home{
+  animation-duration: 3s;
+  animation-name: fade;
+}
 
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
 
 
 /*----------------------------------------------------------*/
@@ -479,5 +490,20 @@ button{
   }
   .social_media{
     padding-right: 25px;
+  }
+  .title {
+    /* The image used */
+    background-image: url('../imgs/net.jpg');
+    image-resolution: 50%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (prefers-reduced-motion) {
+  #mainLogo {
+    animation: none;
   }
 }
