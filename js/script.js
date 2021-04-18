@@ -1,6 +1,7 @@
 
 const change = src => {
-  document.getElementById('mainImg').src = src
+  document.getElementById('mainImg').src = src;
+  document.getElementById('download').href = document.getElementById('mainImg').src;
 };
 
 

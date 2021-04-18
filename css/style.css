@@ -109,6 +109,7 @@ header p{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .im {
@@ -373,6 +374,10 @@ button{
   border: 2px solid #f8b220;
   border-radius: 25px;
 }
+#download{
+  visibility: hidden;
+  width: 0;
+}
 /*----------------------------------------------------------*/
 /* TABLET VIEW */
 @media screen and (min-width: 600px){
@@ -540,6 +545,7 @@ button{
   .flip-button{
     border: none;
   }
+  
 }
 
 @media screen and (min-width: 756px){
@@ -601,9 +607,6 @@ button{
     border: none;
     
   }
-
-
-
   p{
     margin: auto 5%;
   }
@@ -633,6 +636,7 @@ button{
   .main_view{
     width: 80%;
     height: 25rem;
+    margin-bottom: 40px;
   }
   .main_view img{
     width: 100%;
@@ -641,7 +645,6 @@ button{
     border: 5px solid #f8b220;
     margin:  7px auto 7px auto;
   }
-
   .side_view{
     display: flex;
     justify-content: center;
@@ -664,10 +667,17 @@ button{
     visibility: visible;
     width: 9rem;
   }
-
+  #download{
+    visibility: visible;
+    width: auto;
+  }
 }
 @media (prefers-reduced-motion) {
   #mainLogo {
     animation: none;
+  }
+  .flip-card-inner {
+    transition: none;
+    transform-style: none;
   }
 }
