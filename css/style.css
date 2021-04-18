@@ -249,6 +249,10 @@ input, button {
   align-items: center;
   margin: 20px auto 10px auto;
 }
+
+.titleHead{
+  width: 100%;
+}
 button{
   background-color: #17294a;
   margin-bottom: 20px;
@@ -256,7 +260,7 @@ button{
   border: 1px solid #f8b220;
 }
 
-#downArrow{
+#coachArrow, #maizeArrow, #blueArrow{
   width: 15px;
 }
 
@@ -340,6 +344,8 @@ button{
   visibility: hidden;
   width: 0;
 }
+
+
 /*----------------------------------------------------------*/
 .calendar{
   display: grid;
