@@ -111,18 +111,14 @@ header p{
   flex-wrap: wrap;
 }
 
-.gallery > img {
+.im {
   border: 2px #f8b220 solid;
   margin: 10px;
   width: 300px;
 }
 
-.gallery > #mainImg {
-  min-width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#pagebreak{
+  visibility: hidden;
 }
 
 .team {
@@ -201,18 +197,20 @@ input, button {
   margin: auto 10px auto 10px;
 }
 
-.container > img {
-  width: 30%;
+.im {
   align-items: center;
   margin: 10px auto 10px auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .container > p{
   padding-bottom: 0;
 }
-
+.side_view{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .maize{
   display: grid;
   grid-template-columns: auto;
@@ -266,6 +264,9 @@ button{
   border: 5px solid #f8b220;
   margin: 7px;
 }
+#mainImg:hover{
+  margin:  7px auto 7px auto;
+}
 
 .skip a{
   background: #f8b220;
@@ -295,19 +296,17 @@ button{
 }
 
 .logos{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   list-style-type: none;
   justify-content: center;
   text-align: center;
 }
-.logo{
-  min-width: 80px;
-  max-width: 100px;
-  margin-bottom: 20px;
 
-}
-.social_media{
-  padding-right:10px;
-  display: inline-block;
+.logo{
+  min-width: 50px;
+  max-width: 60px;
+  margin-bottom: 20px;
 }
 
 .social_media > a{
@@ -329,7 +328,18 @@ button{
   }
 }
 
+.title{
+  color: white;
+}
 
+#p1, #p2, #p3{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#image10{
+  visibility: hidden;
+  width: 0;
+}
 /*----------------------------------------------------------*/
 .calendar{
   display: grid;
@@ -369,7 +379,20 @@ button{
     float: left;
     margin-left: 10%;
   }
+  .title {
+    /* The image used */
+    background-image: url('../imgs/net.jpg');
+    image-resolution: 50%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  #pagebreak{
+    visibility: visible;
+  }
   .maize{
     grid-template-columns: auto auto ;
 
@@ -414,28 +437,45 @@ button{
   .coaches{
     grid-template-columns: auto auto ;
   }
-  .calendar > p{
-    grid-column: 1/ span 1;
-  }
-  .calendar h2{
-    grid-column: span 3;
-  }
-  .calendar p{
-    grid-row: span 1;
-  }
+  
 
   .form{
     min-width: 400px;
     max-width: 750px;
   }
   .logos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    width: 50%;
+    margin: auto;
     padding: 25px 0; 
   }
   .logo{
     width: 100px;
     margin: auto 20px auto 20px;
+    max-width: 100px;
+  }
+  .main_view > #mainImg {
+    min-width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .im{
+    width: 30%;
+  }
+  .side_view{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
+
 @media screen and (min-width: 756px){
   #main > .container{
     display:grid;
@@ -480,9 +520,17 @@ button{
   .calendar{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 20px;
+    grid-auto-flow: dense;
+  }
+  .calendar h2{
+    grid-column: span 3;
   }
   .calendar > p{
     grid-column: span 1;
+    min-width: 30%;
   }
 
   p{
@@ -491,16 +539,61 @@ button{
   .social_media{
     padding-right: 25px;
   }
-  .title {
-    /* The image used */
-    background-image: url('../imgs/net.jpg');
-    image-resolution: 50%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .maize{
+    grid-template-columns: auto auto auto;
+    max-width: none;
   }
+  .maize > h2{
+    grid-column: 1/span 3;
+  }
+  .blue{
+    grid-template-columns: auto auto auto;
+    max-width: none;
+    }
+  .blue > h2{
+    grid-column: 1/span 3;
+  }
+
+  .gallery{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .main_view{
+    width: 80%;
+    height: 25rem;
+  }
+  .main_view img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #f8b220;
+    margin:  7px auto 7px auto;
+  }
+
+  .side_view{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .side_view img{
+    width: 9rem;
+    height: 7rem;
+    object-fit: cover;
+    cursor: pointer;
+    margin:0.5rem;
+  }
+  .side_view img:hover{
+    border: 2px solid #f8b220;
+    margin:0.5rem;
+    opacity: 75%;
+  }
+  #image10{
+    visibility: visible;
+    width: 9rem;
+  }
+
 }
 @media (prefers-reduced-motion) {
   #mainLogo {
