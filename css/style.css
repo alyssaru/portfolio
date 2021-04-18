@@ -394,6 +394,7 @@ button{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: black;
   }
 
   #pagebreak{
@@ -530,14 +531,70 @@ button{
     column-gap: 10px;
     row-gap: 20px;
     grid-auto-flow: dense;
+    justify-content: center;
+
   }
   .calendar h2{
     grid-column: span 3;
   }
-  .calendar > p{
+  .calendar > div, .calendar > button{
     grid-column: span 1;
-    min-width: 30%;
+    border: none;
+    
   }
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f8b220;
+    perspective: 1000px; 
+    margin: auto;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner, .flip-button:focus .flip-card .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #1b386d;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #1b386d;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back > p, .flip-card-front > p{
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .flip-card-front > img{
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    line-height: 1.5;
+  }
+
 
   p{
     margin: auto 5%;

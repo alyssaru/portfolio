@@ -36,7 +36,7 @@ document.querySelector("#blueArrow").addEventListener("click", function() {
   if(toChange.style.visibility=='hidden'){
     toChange.style.visibility='visible';
     toChange.style.height='initial';
-    document.querySelector("#blueArrow").src="imgs/uArrow.png"
+    document.querySelector("#blueArrow").src="imgs/uArrow.png";
   }else{
     toChange.style.visibility='hidden'; 
     toChange.style.height=0;
