@@ -14,7 +14,7 @@ img{
   margin-right: auto;
 }
 
-header > img{
+.title > img{
   position: absolute;
   width: 20%;
   display: inline;
@@ -118,7 +118,7 @@ header p{
   width: 300px;
 }
 
-#pagebreak{
+#pageBreak1, #pageBreak2{
   visibility: hidden;
 }
 
@@ -296,7 +296,7 @@ button{
   display: none;
 }
 
-#ball{
+#ball1, #ball2, #ball3{
   width: 20%;
 }
 
@@ -383,8 +383,8 @@ button{
 @media screen and (min-width: 600px){
   main > header > h1{
     margin: 20px;
-    border: 5px #f8b220 solid;
-    background-color: #1b386d;
+    
+    background-color: transparent;
     width: 50%;
     margin: 20px auto 20px auto;
   }
@@ -396,10 +396,8 @@ button{
     margin-left: 10%;
   }
   .title {
-    /* The image used */
     background-image: url('../imgs/net.jpg');
     image-resolution: 50%;
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -407,7 +405,7 @@ button{
     color: black;
   }
 
-  #pagebreak{
+  #pageBreak1, #pageBreak2{
     visibility: visible;
   }
   .maize{
@@ -530,10 +528,11 @@ button{
     color: white;
     transform: rotateY(180deg);
   }
-  .flip-card-back > p, .flip-card-front > p{
+  .flip-card-back > h1, .flip-card-front > h1{
     margin: auto;
-    margin-top: 10%;
     text-align: center;
+    font-size: 24px;
+    font-weight: 200;
     line-height: 1.5;
   }
   .flip-card-front > img{
@@ -545,7 +544,7 @@ button{
   .flip-button{
     border: none;
   }
-  
+
 }
 
 @media screen and (min-width: 756px){
@@ -582,7 +581,7 @@ button{
     grid-row: 3/span 1;
     grid-column: 2/span 1;
   }
-  #pagebreak{
+  #pageBreak1, #pageBreak2{
     visibility: hidden;
   }
   #thin1, #thin2, #thin3{
