@@ -679,4 +679,7 @@ button{
     transition: none;
     transform-style: none;
   }
+  .title{
+    color: white;
+  }
 }
